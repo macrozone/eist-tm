@@ -1,0 +1,22 @@
+<script src="/jquery"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+
+  var socket = io.connect('http://192.168.103.139:8080');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('add user', { user});
+  });
+</script>
+
+
+<form class="addUserForm">
+<input type="text" name="grade" placeholder="grade"/>
+<input type="text" name="firstname" placeholder="firstname"/>
+
+<input type="text" name="lastname" placeholder="lastname"/>
+<input type="submit" value="submit" />
+
+</form>

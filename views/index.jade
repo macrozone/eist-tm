@@ -1,0 +1,27 @@
+!!!5
+html
+  head
+    title= title
+   
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/js/jquery-1.7.2.min.js')
+    script(type="text/javascript", src="/socket.io/socket.io.js")
+    script(type="text/javascript", src="/js/client.js")
+    script(type='text/javascript', src='/js/pages/index.js')
+    
+  body
+    div
+      form(id='addUserForm')
+        label Grade:
+          input(name='grade')
+        br
+        
+        label Firstname:
+          input(name='firstname')
+        br
+        label Lastname:
+          input(name='lastname')
+        br
+        input(type="submit")
+        
+        table(class="personTable")
